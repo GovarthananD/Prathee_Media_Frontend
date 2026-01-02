@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import api from "../api/axios";
+import API from "../api/axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
@@ -30,7 +30,7 @@ const Register = () => {
     }),
     onSubmit: async (values, { resetForm }) => {
       try {
-        await api.post("/register", values);
+        await API.post("/register", values);
         toast.success("Registration successful. Please login.");
         resetForm();
         navigate("/login");
