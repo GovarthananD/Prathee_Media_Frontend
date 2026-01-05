@@ -3,7 +3,7 @@ import API from "../api/axios";
 import ProductCard from "../components/ProductCard";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShirt, faMobileAlt, faLaptop, faHome, faTshirt, faPlug, faDesktop, faBlender, faBorderAll } from '@fortawesome/free-solid-svg-icons';
+import { faShirt, faMobileAlt, faLaptop, faHome, faTshirt, faPlug,faBorderAll,faCookieBite } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +20,7 @@ const Home = () => {
   const categories = [
     {
       id: 1,
-      name: "Fashion",
+      name: "Fashion",  
       value: "fashion",
       icon: faShirt,
       color: "#ff6b6b",
@@ -49,6 +49,14 @@ const Home = () => {
       color: "#96ceb4",
       description: "Home & Kitchen"
     },
+    {
+      id:5,
+      name:"Grocery",
+      value: "grocery",
+      icon:faCookieBite,
+      color:"#feca57",
+      description:"Food & Essentials"
+    }
   ];
 
   useEffect(() => {
