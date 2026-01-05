@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="card h-100 shadow-lg cursor-pointer"
+    <div className="card h-100 shadow-lg cursor-pointer product-card"
       onClick={() => navigate(`/product/${product._id}`)}>
       <div className="ratio ratio-4x3">
         <img
